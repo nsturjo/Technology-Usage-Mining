@@ -60,7 +60,7 @@ for subdir in folders:
             for index,node in enumerate(moc):
                 if (node.tag == xmlns + 'groupId' and node.text == 'org.antlr'):
                     a += 1
-                    temp = moc[index + 2]
+                    version = moc[index + 2]
 #                    antler_v.append(temp.text)
 
         if(a == 0):
@@ -71,12 +71,12 @@ for subdir in folders:
                 for index,node in enumerate(moc):
                     if (node.tag == xmlns + 'groupId' and node.text == 'org.antlr'):
                         a += 1
-                        temp = moc[index + 2]
+                        version = moc[index + 2]
 #                        antler_v.append(temp.text)
 
         if a != 0 :
             antler.append(1)
-            antler_v.append(temp.text)
+            antler_v.append(version.text)
         else:
             antler.append(0)
             antler_v.append(0)
